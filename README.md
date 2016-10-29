@@ -11,7 +11,10 @@ The plugin lets Webpack handle those CommonJS customizations and use the feature
 
 * `webpack` 1.x only supported at this time
 * `less-loader`, `css-loader`, `style-loader` in your `webpack.config.js` are required for correct LESS/CSS parsing
+	* This works with [`extract-text-webpack-plugin`](https://github.com/webpack/extract-text-webpack-plugin) too
+	* Retain classnames to ensure Enyo runs correct. For example `style!css?localIdentName=[local]!less`
 * `file-loader` and/or `uri-loader` in your `webpack.config.js` are required for correct asset handling
+	* Retain relative asset filepaths to ensure Enyo runs correct. For example `file?name=[path][name].[ext]`
 
 **IMPORTANT**: `json-loader` must not be used on Enyo library dependencies, as it will break `enyo-ilib` support. If you're using it in your project, please be sure to add appropriate include/exclude settings in your `webpack.config.js`.
 
