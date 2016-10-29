@@ -5,7 +5,7 @@ A webpack plugin that allows [Enyo](http://enyojs.com) code to build correctly.
 
 [EnyoJS](https://github.com/enyojs/enyo) is a cross-platform, established, and heavily battled-tested javascript framework that among other things, has powered LG TVs for several years now. It is designed in a CommonJS-like style with a number of customizations, and is packaged with a custom [enyo-dev](https://github.com/enyojs/enyo-dev) tool.
 
-The plugin allows Webpack to handle those CommonJS customizations and use features/components from the Enyo framework. This allows you to combine the mature robust Enyo libraries with all the configurability and addons that Webpack has to offer.
+The plugin lets Webpack handle those CommonJS customizations and use the features/components from the Enyo framework. This allows you to combine the mature robust Enyo libraries with all the configurability and addons that Webpack has to offer.
 
 ## Requirements
 
