@@ -13,7 +13,7 @@ The plugin lets Webpack handle those CommonJS customizations and use the feature
 * `less-loader`, `css-loader`, `style-loader` in your `webpack.config.js` are required for correct LESS/CSS parsing
 * `file-loader` and/or `uri-loader` in your `webpack.config.js` are required for correct asset handling
 
-**IMPORTANT**: `json-loader` must not be used on Enyo library dependencies, as it will break enyo-ilib support. Please be sure to add appropriate include/exclude settings in your `webpack.config.js` so they will be correctly treated as file assets.
+**IMPORTANT**: `json-loader` must not be used on Enyo library dependencies, as it will break enyo-ilib support. If you're using it in your project, please be sure to add appropriate include/exclude settings in your `webpack.config.js`.
 
 
 ## Install
