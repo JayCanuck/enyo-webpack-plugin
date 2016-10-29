@@ -14,8 +14,8 @@ module.exports = function(content, sourceMap) {
 	// Prepend the promise polyfill in the first js file of the build
 	var header = '';
 	if(query.isEntry) {
-		var promise = path.relative(context, path.join(__dirname, 'promise.js'));
-		header += 'require(\'' + promise.replace(/\\/g, '/') + '\');\n\n';
+		var promise = path.join(__dirname, 'promise.js').replace(/\\/g, '/');
+		header += 'require(\'' + promise + '\');\n\n';
 	}
 
 	// Rewrite @-notion shorthand paths
@@ -40,7 +40,7 @@ module.exports = function(content, sourceMap) {
 		return 'request(function(cb){ require.ensure([' + value + '], function(require){ cb(require(' + value + ')); }) })';
 	});
 	if(hasRequest || isRequestFn.test(content)) {
-		var request = path.relative(context, path.join(__dirname, 'request.js')).replace(/\\/g, '/');
+		var request = path.join(__dirname, 'request.js').replace(/\\/g, '/');
 		header += 'require(\'' + request.replace(/\\/g, '/') + '\');\n\n';
 	}
 
